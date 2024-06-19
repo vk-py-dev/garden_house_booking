@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form with Date Picker</title>
+    <!-- Add Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <style>
+        /* Custom CSS to center the form and set its width */
+        .form-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .form-container .form-content {
+            width: 450px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <form action="/booking" method="post" class="form-content">
+            <div class="form-group">
+                <label for="date">Choose a date:</label>
+                <input type="date" id="date" name="date" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
