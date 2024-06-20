@@ -69,3 +69,8 @@ def make_booking(date: str = Form(...), token: str = Depends(get_token)):
         return {"message": "Booking successful"}
     except Exception as e:
         raise HTTPException(status_code=400, detail=str(e))
+
+
+@router.get("/",)
+def home():
+    return RedirectResponse(url='/login', status_code=status.HTTP_303_SEE_OTHER)

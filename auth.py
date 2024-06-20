@@ -7,7 +7,7 @@ from fastapi import HTTPException
 from starlette.requests import Request
 
 # Establish a connection to your Redis server
-r = redis.Redis(host='localhost', port=6379, db=0)
+r = redis.StrictRedis().from_url("redis://redis:6379/1")
 
 
 def get_user(username):
